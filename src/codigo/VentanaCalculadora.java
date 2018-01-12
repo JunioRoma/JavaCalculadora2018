@@ -459,12 +459,22 @@ pintaNumero("2");
     }//GEN-LAST:event_jButton10MousePressed
 
     private void jButton16MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MousePressed
-        realizaOperacion();
+        numero1 = "";
+        jLabel2.setText("");
+        jLabel1.setText("");
     }//GEN-LAST:event_jButton16MousePressed
 
     private void jButton18MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton18MousePressed
    
-        pintaNumero(".");
+         String cadena1 = jLabel1.getText();
+        
+        if(cadena1.contains(".")){
+            jLabel1.setText(cadena1);
+        }
+        else{
+            jLabel1.setText(cadena1 + ".");
+        }
+    
     }//GEN-LAST:event_jButton18MousePressed
 
     private void jButton17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MousePressed
@@ -525,7 +535,13 @@ pintaNumero("2");
     }//GEN-LAST:event_jButton11MousePressed
 
     private void jButton19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MousePressed
-        pintaNumero("0");
+       //Con esto consigo ir borrando poco a poco el ultimo caracter de la cadena1 ( la pantalla donde se opera);
+       //Derechos de Copyright protegidos por la empresa Sony entertainment network.Poia
+        String cadena1 = jLabel1.getText();
+        cadena1 = cadena1.substring(0,cadena1.length()-1);
+        jLabel1.setText(cadena1);
+        if (cadena1.length()==0)
+            jLabel1.setText("0");
     }//GEN-LAST:event_jButton19MousePressed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
@@ -533,9 +549,9 @@ pintaNumero("2");
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MousePressed
-        String numero2 = jLabel1.getText();
-        double operando2 = Double.valueOf(numero2);
-        double operando1 = Double.valueOf(numero1);
+        
+        String cadena1 = jLabel1.getText();
+        
                 
     }//GEN-LAST:event_jButton21MousePressed
 
